@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fenghui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    fenghui:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.gift.View.Person">
+
+    <android.support.design.widget.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar" >
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Gift"
+                android:textColor="@color/colorAccent"
+                android:textSize="23dp"
+                android:textStyle="bold"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_selectAll"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="SelectAll"/>
+        <Button
+            android:id="@+id/bt_cancelSelected"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="CancelSelected"/>
+        <Button
+            android:id="@+id/bt_deleteAll"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="DeleteAll"/>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/line"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+
+</RelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
